@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-25 09:37:09 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlJNUdBS1M7MjAyMi0wOS0yNTswOToxNTowMiBQTTszMzUx"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlJNUdBS1M7MjAyMi0wOS0yNTswOTozNzowOSBQTTsxOzM0NzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="amountofitem" type="Integer" array="False" size=""/>
+            <declare name="tax" type="Integer" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter amount of an item&quot;" newline="True"/>
+            <input variable="amountofitem"/>
+            <assign variable="tax" expression="amountofitem * 0.07"/>
+            <assign variable="total" expression="tax + amountofitem"/>
+            <output expression="&quot;Amount of the item&quot; &amp; amountofitem" newline="True"/>
+            <output expression="&quot;Tax is &quot; &amp; tax" newline="True"/>
+            <output expression="&quot;Total Order &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
