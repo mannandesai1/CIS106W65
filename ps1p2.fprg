@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-25 10:12:41 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlJNUdBS1M7MjAyMi0wOS0yNTswOTo1NDoxMCBQTTszMzUz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlJNUdBS1M7MjAyMi0wOS0yNTsxMDoxMjo0MSBQTTsxOzM0NTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="LastName1" type="String" array="False" size=""/>
+            <declare name="ExamScore1" type="Real" array="False" size=""/>
+            <declare name="ExamScore2" type="Real" array="False" size=""/>
+            <declare name="AverageScore" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter a Last Name&quot;" newline="True"/>
+            <input variable="LastName1"/>
+            <output expression="&quot;Please enter an exam score&quot;" newline="True"/>
+            <input variable="ExamScore1"/>
+            <output expression="&quot;Please enter another exam score&quot;" newline="True"/>
+            <input variable="ExamScore2"/>
+            <assign variable="AverageScore" expression="(ExamScore1 + ExamScore2)/2"/>
+            <output expression="&quot;LastName1&quot; &amp; LastName1" newline="True"/>
+            <output expression="&quot;AverageScore&quot; &amp; AverageScore" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
