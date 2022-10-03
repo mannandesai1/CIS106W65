@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-02 06:54:39 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLU5GMEc2M1M7MjAyMi0xMC0wMjswNjo0NTozOCBQTTszMzA5"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLU5GMEc2M1M7MjAyMi0xMC0wMjswNjo1NDozOSBQTTsxOzM0MTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="LastName" type="String" array="False" size=""/>
+            <declare name="Hours" type="Real" array="False" size=""/>
+            <declare name="Rate" type="Real" array="False" size=""/>
+            <declare name="GrossPay" type="Real" array="False" size=""/>
+            <input variable="LastName"/>
+            <input variable="Hours"/>
+            <input variable="Rate"/>
+            <assign variable="GrossPay" expression="Hours * Rate"/>
+            <output expression="&quot;Your gross pay is $&quot; &amp; GrossPay" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
