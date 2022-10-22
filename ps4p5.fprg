@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-22 12:32:21 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVE5MkswUUc7MjAyMi0xMC0yMjsxMjoxNDo1NyBQTTszMzEz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVE5MkswUUc7MjAyMi0xMC0yMjsxMjozMjoyMSBQTTsxOzM0MTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="LastName" type="String" array="False" size=""/>
+            <declare name="Salary" type="Real" array="False" size=""/>
+            <declare name="JobLevel" type="Real" array="False" size=""/>
+            <declare name="BonusRate" type="Real" array="False" size=""/>
+            <declare name="Bonus" type="Real" array="False" size=""/>
+            <input variable="JobLevel"/>
+            <input variable="Salary"/>
+            <input variable="LastName"/>
+            <if expression="JobLevel &gt; 10">
+                <then>
+                    <assign variable="BonusRate" expression="0.25"/>
+                </then>
+                <else>
+                    <if expression="JobLevel &gt; 5">
+                        <then>
+                            <assign variable="BonusRate" expression="0.20"/>
+                        </then>
+                        <else>
+                            <assign variable="BonusRate" expression="0.10"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="Bonus" expression="Salary * BonusRate"/>
+            <output expression="&quot;Employee Last Name is&quot; &amp; LastName" newline="True"/>
+            <output expression="&quot;The bonus rate is&quot; &amp; BonusRate" newline="True"/>
+            <output expression="&quot;The bonus is $&quot; &amp; Bonus" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
