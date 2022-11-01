@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-01 11:17:02 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVA2NzJGSUU7MjAyMi0xMS0wMTsxMDozODozNiBBTTszMjg1"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVA2NzJGSUU7MjAyMi0xMS0wMTsxMToxNzowMiBBTTsxOzMzODQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Response" type="String" array="False" size=""/>
+            <declare name="Principle" type="Real" array="False" size=""/>
+            <declare name="InterestAmount" type="Real" array="False" size=""/>
+            <declare name="InterestRate" type="Real" array="False" size=""/>
+            <declare name="EndingBalance" type="Real" array="False" size=""/>
+            <declare name="TotalInterest" type="Real" array="False" size=""/>
+            <declare name="Year" type="Integer" array="False" size=""/>
+            <output expression="&quot;Do you want to calculate interest? (Yes or No)&quot;" newline="True"/>
+            <input variable="Response"/>
+            <while expression="Response == &quot;Yes&quot;">
+                <output expression="&quot;Enter amount to invest&quot;" newline="True"/>
+                <input variable="Principle"/>
+                <output expression="&quot;Enter interest rate&quot;" newline="True"/>
+                <input variable="InterestRate"/>
+                <assign variable="TotalInterest" expression="0.0"/>
+                <output expression="&quot;Year&quot; &amp; &quot;Beg Balance&quot; &amp; &quot;End Balance&quot;" newline="True"/>
+                <for variable="Year" start="1" end="5" direction="inc" step="1">
+                    <assign variable="InterestAmount" expression="Principle * InterestRate"/>
+                    <assign variable="EndingBalance" expression="Principle + InterestAmount"/>
+                    <output expression="Year &amp; &quot;    &quot; &amp; Principle &amp; &quot;     &quot; &amp; EndingBalance" newline="True"/>
+                    <assign variable="TotalInterest" expression="TotalInterest + InterestAmount"/>
+                    <assign variable="Principle" expression="EndingBalance"/>
+                </for>
+                <output expression="&quot;Total Interest Earned&quot; &amp; TotalInterest" newline="True"/>
+                <output expression="&quot;Do another calculation? (Yes or No)&quot;" newline="True"/>
+                <input variable="Response"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
