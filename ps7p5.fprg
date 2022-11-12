@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-12 01:14:28 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVZDS05FQzA7MjAyMi0xMS0xMjsxMjo0Mzo1MSBQTTszMzM2"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVZDS05FQzA7MjAyMi0xMS0xMjswMToxNDoyOCBQTTsxOzM0NDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="LastName" type="String" array="False" size=""/>
+            <declare name="CreditHours" type="Real" array="False" size=""/>
+            <declare name="DistrictCode" type="String" array="False" size=""/>
+            <declare name="TuitionOwed" type="Real" array="False" size=""/>
+            <input variable="LastName"/>
+            <input variable="CreditHours"/>
+            <input variable="DistrictCode"/>
+            <assign variable="TuitionOwed" expression="comptuitionowed(CreditHours,DistrictCode)"/>
+            <output expression="&quot;Student Last Name: &quot; &amp; LastName" newline="True"/>
+            <output expression="&quot;Total Tuition $ &quot; &amp; TuitionOwed" newline="True"/>
+        </body>
+    </function>
+    <function name="comptuitionowed" type="Real" variable="TuitionOwed">
+        <parameters>
+            <parameter name="CreditHours" type="Real" array="False"/>
+            <parameter name="DistrictCode" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="TuitionOwed" type="Real" array="False" size=""/>
+            <if expression="DistrictCode == &quot;I&quot;">
+                <then>
+                    <assign variable="TuitionOwed" expression="CreditHours * 250"/>
+                </then>
+                <else>
+                    <assign variable="TuitionOwed" expression="CreditHours * 550"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
